@@ -4,12 +4,10 @@ public class PrefixMaxSubArry {
         int currSum = 0;
         int maxSum = Integer.MIN_VALUE;
         int prefix[] = new int[num.length];
-
         prefix[0] = num[0];
         for (int i = 1; i < prefix.length; i++) {
             prefix[i] = prefix[i - 1] + num[i];
         }
-
         for (int i = 0; i < num.length; i++) {
             int start = i;
             for (int j = i; j < num.length; j++) {
@@ -19,12 +17,9 @@ public class PrefixMaxSubArry {
                     maxSum = currSum;
                 }
             }
-
         }
         System.out.println("Max sum is :" + maxSum);
-
     }
-
     public static void main(String[] args) {
         int num[] = { 5, 4, -1, 7, 8 };
         SubArryMax(num);
